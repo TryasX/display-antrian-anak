@@ -25,7 +25,7 @@ function App() {
 
   const fetchAntrianData = async () => {
     try {
-      const response = await axios.get('http://127.0.0.1:8000/api/antrian-anak') 
+      const response = await axios.get('http://it.shbk.com:8030/api/antrian-anak') 
       const rawData = response.data?.data
 
       if (!Array.isArray(rawData)) {
@@ -106,7 +106,7 @@ function App() {
       height: '100vh',
       width: '100vw',
       boxSizing: 'border-box',
-      backgroundImage: `url('/bg-binatang.png')`,
+      backgroundImage: `url('bg-binatang.png')`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       fontFamily: '"Nunito", "Quicksand", system-ui, sans-serif',
@@ -135,7 +135,7 @@ function App() {
         <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
           <motion.img 
             whileHover={{ rotate: 10, scale: 1.1 }}
-            src="/logo.png" 
+            src="logo.png" 
             alt="Logo RS" 
             style={{ height: '45px', objectFit: 'contain' }} 
           />
